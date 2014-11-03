@@ -1,8 +1,9 @@
 <h1>Listing sweets</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
+      <th>category<th/>
       <th>Name</th>
       <th>Photo</th>
       <th colspan="3"></th>
@@ -12,11 +13,12 @@
   <tbody>
     <% @sweets.each do |sweet| %>
       <tr>
+        <td><%= sweet.category.name %></td>
         <td><%= sweet.name %></td>
         <td><%= sweet.photo %></td>
         <td><%= link_to 'Show', sweet %></td>
         <td><%= link_to 'Edit', edit_sweet_path(sweet) %></td>
-        <td><%= link_to 'Destroy', sweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', sweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
