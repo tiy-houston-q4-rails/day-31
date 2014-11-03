@@ -45,3 +45,5 @@ gem 'rails_12factor'
 gem 'simple_form', '3.1.0.rc2'
 gem 'carrierwave'
 gem "mini_magick", "~> 4.0.0.rc"
+gem 'fog'
+gem 'dotenv-rails'
