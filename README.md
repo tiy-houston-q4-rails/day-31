@@ -33,7 +33,7 @@ before_action :authenticate_user!
 ```
 
 ####Heroku
-``ruby
+```ruby
 gem "rails_12factor"
 gem "pg"
 ```
