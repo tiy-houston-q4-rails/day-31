@@ -7,7 +7,7 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @sweet.photo %>
+  <%= image_tag @sweet.photo.url(:thumb) %>
 </p>
 
 <%= link_to 'Edit', edit_sweet_path(@sweet) %> |

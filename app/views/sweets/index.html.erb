@@ -15,7 +15,11 @@
       <tr>
         <td><%= sweet.category.name %></td>
         <td><%= sweet.name %></td>
-        <td><%= sweet.photo %></td>
+        <td>
+          <%= link_to sweet.photo.url(:large) do %>
+            <%= image_tag sweet.photo.url(:thumb) %>
+          <% end %>
+          </td>
         <td><%= link_to 'Show', sweet %></td>
         <td><%= link_to 'Edit', edit_sweet_path(sweet) %></td>
         <td><%= link_to 'Destroy', sweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
